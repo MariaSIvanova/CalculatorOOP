@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * Created by mivanova on 17.12.2017.
- * класс реализует интерфейс Operand ----- для принципа наследования
+ * класс расширяет Operand ----- для принципа наследования
  */
 public class Data extends Operand {
     /**
