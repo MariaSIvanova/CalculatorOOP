@@ -8,7 +8,7 @@ import java.util.Scanner;
  */
 public class ChooseOperation {
     //поле класса для получения разных реализаций интерфейса OperationForTwoOperands
-    private OperationForTwoOperands someOper;
+    public OperationForTwoOperands someOper;
     private static Scanner scanner = new Scanner(System.in);
 
     /**

@@ -1,33 +1,32 @@
 package operands;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
  * Created by mivanova on 17.12.2017.
- * класс расширяет Operand ----- для принципа наследования
+ * Update by mivanova on 27.12.2017.
  */
-public class Data extends Operand {
-    /**
-     * модификатор private для приниципа инкапсуляции
-     */
-    private static Scanner scanner = new Scanner(System.in);
-
-    /**
-     *
-     * @param operand вещественное число
-     */
-    public Data(Double operand) {
-        super(operand);
-    }
+public class Data {
 
     /**
      *
      * @param m - для передачи текста перед получением значения из консоли
      * @return - метод возвращает вещественное число из консоли
      */
-    public static double inputData(String m){
+    public static double inputData(String m, Scanner scanner){
         System.out.println(m);
-        return scanner.nextDouble();
+        //return scanner.nextDouble();
+        double d;
+        try{
+            d = scanner.nextDouble();
+        }
+        catch (InputMismatchException ex) {
+            System.out.println("---ОШИБКА---Допустимы для ввода только числа------");
+            throw new InputMismatchException("Ввели не число");
+
+        }
+        return d;
     }
 
 }
